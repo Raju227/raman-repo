@@ -1,5 +1,2 @@
-[all:vars]
-ansible_ssh_common_args='-o StrictHostKeyChecking=no'
-
-[dev]
+[all]
 ansible_ssh_host=172.31.28.93 ansible_ssh_port=22 ansible_user=ansible
