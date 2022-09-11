@@ -1,6 +1,6 @@
 ---
 - name: create user
-  hosts: dev
+  hosts: all
   become: yes
   tasks:
     - name: creating ansible user
