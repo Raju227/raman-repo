@@ -4,12 +4,6 @@ pipeline {
    ANSIBLE_PRIVATE_KEY=credentials('mariadb-private-key')
   }
   stages {
-  
-    stage('mvn') {
-      steps {
-	    sh 'mvn clean package'
-	  }
-	}
     stage('ansible') {
       steps {
         sh 'ansible-playbook -i inventory/hosts --private-key=$ANSIBLE_PRIVATE_KEY playbooks/mariadb.yml'
