@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('ansible') {
       steps {
-        sh 'ansible-playbook -i inventory/hosts --private-key=$ANSIBLE_PRIVATE_KEY playbooks/mariadb.yml'
+        sh 'ansible-playbook -i inventory/hosts --private-key=$ANSIBLE_PRIVATE_KEY playbooks/ansible-playbook.yaml'
       }
     }
   }
