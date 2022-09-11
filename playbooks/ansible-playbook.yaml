@@ -1,0 +1,10 @@
+- name: create user
+  hosts: dev
+  become: yes
+  tasks:
+    - name: creating ansible user
+      user:
+        name: Ramanji-devops
+        password: Ramanji-devops
+        state: present
+       
